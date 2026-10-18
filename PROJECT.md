@@ -1,7 +1,8 @@
 # Project: ClaimScout
 
 **Goal:** a better version of hiddenfunds.xyz: more complete, safer, with alerts and guided claims.
-**Owner:** you. **Status:** v0.4.0 (5 adapters: Ethereum, Polygon/Polymarket, Solana; USD; ENS).
+**Owner:** you. **Live:** https://claimscout-zv25.onrender.com (Render free tier, spins down when idle; first request after idle can take ~50s). Repo: https://github.com/elstancloud-boop/claimscout
+**Status:** v0.4.0 (5 adapters: Ethereum, Polygon/Polymarket, Solana; USD; ENS).
 **Created:** 2026-10-18.
 
 ## Principles
@@ -25,3 +26,5 @@ See `docs/ROADMAP.md` for phases and checkboxes.
 - 2026-10-18: MKR added after verifying token on-chain and official link. RNDR still deferred: unclear which chain/token migrated.
 - 2026-10-18: Added Solana (stake) and Polymarket after verifying both against live data. Other EVM L2 withdrawals deferred: need proof libraries and cannot be verified by simple reads.
 - 2026-10-18: Bugs found by live tests: Lido read-only Result crash; CoinGecko 429 (now DefiLlama first).
+- 2026-10-18: Deployed to Render (free). Render autofilled start command `node src/scan.js` (wrong); must be `npm start`. Deploy via Public Git Repository tab (new repos are not listed until the Render GitHub app is granted access).
+- Known gap: files on GitHub were uploaded by hand; any later code change must be re-uploaded or committed (auto-deploy is not configured for public-repo deploys).
