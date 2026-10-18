@@ -1,6 +1,8 @@
 'use strict';
 // Resolved Polymarket positions that were never redeemed (Polygon, USDC).
-// Data: Polymarket public Data API GET /positions?user=<proxy wallet>&redeemable=true. Fields verified live:
+// Data: Polymarket public Data API GET /positions?user=<proxy wallet>&redeemable=true.
+// Docs (params user, redeemable, sizeThreshold, limit max 500, offset): https://docs.polymarket.com/api-reference/core/get-current-positions-for-a-user
+// Response fields verified by live calls (not all are listed in the docs excerpt):
 // redeemable, currentValue (USD), size, curPrice, title, outcome, conditionId.
 // NOTE: Polymarket holds positions in a proxy wallet. Users must paste the address shown on their Polymarket profile.
 const API = 'https://data-api.polymarket.com/positions';
@@ -32,7 +34,7 @@ module.exports = {
         'Go to Portfolio and find the resolved market.',
         'Press Redeem / Claim and confirm. Polymarket is not available in every region; follow its rules.',
       ],
-      source: 'https://docs.polymarket.com/developers/misc-endpoints/data-api-get-positions',
+      source: 'https://docs.polymarket.com/api-reference/core/get-current-positions-for-a-user',
     }));
   },
 };
