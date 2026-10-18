@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: claimscout
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: RPC_ETHEREUM
+        sync: false
+      - key: RPC_SOLANA
+        sync: false
