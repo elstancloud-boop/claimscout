@@ -1,4 +1,10 @@
 # Changelog
+## 0.4.1 - 2026-10-18 (audit)
+- FIX: Polymarket adapter cited a page that did not document /positions; now cites the correct API reference.
+- FIX: rate-limiter map never pruned idle IPs (slow memory growth); now pruned every minute.
+- FIX: site copy overclaimed "checked against official documentation"; reworded.
+- FIX: ARCHITECTURE.md was outdated (said Ethereum only, no pricing); rewritten. Known limits documented (spoofable IP key).
+
 ## 0.4.0 - 2026-10-18
 - NEW `solana-stake` adapter: SOL in stake accounts that are inactive, never delegated, or locked (needs-team). Classification unit-tested; verified live against real accounts.
 - NEW `polymarket-redeem` adapter (Polygon): resolved winning positions not redeemed, via Polymarket's public Data API. Users paste the address shown on their Polymarket profile (their proxy wallet).

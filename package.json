@@ -1,6 +1,6 @@
 {
   "name": "claimscout",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Read-only scanner that finds crypto you can still claim (stuck withdrawals, old tokens, shut-down apps) and links to the official claim page.",
   "main": "src/scan.js",
   "scripts": {
