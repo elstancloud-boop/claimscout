@@ -1,0 +1,32 @@
+:root{--bg:#09090a;--panel:#111113;--line:#25252a;--text:#ededee;--muted:#9a9aa1;--accent:#7cf0c0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--accent)}
+nav{position:sticky;top:0;z-index:5;background:rgba(9,9,10,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .in{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;gap:24px;align-items:center}
+nav .logo{font:700 18px Georgia,serif;color:var(--text);text-decoration:none;margin-right:auto}
+nav a.l{color:var(--muted);text-decoration:none;font-size:14px}nav a.l:hover{color:var(--text)}
+.btn{display:inline-block;background:#fff;color:#000;border:0;border-radius:9px;padding:12px 22px;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+section{max-width:1080px;margin:0 auto;padding:72px 20px}
+.hero{padding-top:96px}
+h1{font:600 clamp(40px,7vw,72px)/1.04 Georgia,serif;margin:0 0 20px;letter-spacing:-.02em}
+h2{font:600 34px/1.15 Georgia,serif;margin:0 0 10px}
+.sub{color:var(--muted);font-size:19px;max-width:640px}
+.muted{color:var(--muted)}
+.tool{margin-top:36px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+textarea{width:100%;height:120px;background:#0c0c0d;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:12px;font:14px ui-monospace,Menlo,monospace;resize:vertical}
+.row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:28px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card h3{margin:0 0 6px;font-size:17px}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:20px;padding:2px 10px;color:var(--muted);margin-bottom:8px}
+.tag.live{color:var(--accent);border-color:#2b5a47}
+.amt{font:600 24px Georgia,serif}
+.num{font:600 15px Georgia,serif;color:var(--accent)}
+details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin:10px 0 0}
+.safe li{margin:8px 0}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;text-align:center;padding:32px 20px}
+.res .card{margin-top:14px}
+.res h2{margin-top:28px}.res .amt{margin:4px 0}

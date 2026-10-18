@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClaimScout: find the crypto you left behind</title>
+<meta name="description" content="Paste your wallets and see what crypto you can still claim, with the official link for each. Read-only. No wallet connection.">
+<link rel="stylesheet" href="style.css"></head><body>
+<nav><div class="in"><a class="logo" href="#top">ClaimScout</a><a class="l" href="#what">What we find</a><a class="l" href="#how">How it works</a><a class="l" href="#safe">Safety</a><a class="l" href="#faq">FAQ</a><a class="btn" href="#check">Check wallets</a></div></nav>
+<section class="hero" id="top">
+<h1>Find the crypto<br>you left behind</h1>
+<p class="sub">Withdrawals nobody pressed Claim on, old tokens never upgraded. Paste your wallets and see what you can still claim, with the official link for each.</p>
+<div class="tool" id="check">
+<textarea id="w" placeholder="0x, Solana or name.eth addresses. One or many, separated by spaces, commas or new lines."></textarea>
+<div class="row"><button class="btn" id="go">Check wallets</button><label class="muted">or upload .txt / .csv <input id="f" type="file" accept=".txt,.csv"></label></div>
+<div id="out" class="res" aria-live="polite"></div>
+</div></section>
+<section id="what"><h2>What we find</h2><p class="muted">Every source below is checked against the project's official documentation before it goes live.</p>
+<div class="grid">
+<div class="card"><span class="tag live">Live</span><h3>Lido withdrawals</h3><p class="muted">You requested ETH back from Lido, it finished, but nobody pressed Claim.</p></div>
+<div class="card"><span class="tag live">Live</span><h3>MATIC to POL</h3><p class="muted">Old MATIC on Ethereum still waiting for its 1:1 upgrade to POL.</p></div>
+<div class="card"><span class="tag live">Live</span><h3>MKR to SKY</h3><p class="muted">Old MKR never upgraded to SKY. A delay penalty grows over time.</p></div>
+<div class="card"><span class="tag live">Live</span><h3>Solana stake</h3><p class="muted">SOL sitting in stake accounts that finished cooling down and were never withdrawn.</p></div>
+<div class="card"><span class="tag live">Live</span><h3>Polymarket winnings</h3><p class="muted">Resolved markets you won but never redeemed. Paste the address on your Polymarket profile.</p></div>
+<div class="card"><span class="tag">Coming</span><h3>Layer-2 withdrawals</h3><p class="muted">Arbitrum, Optimism and Base withdrawals never finalized on Ethereum.</p></div>
+<div class="card"><span class="tag">Coming</span><h3>Ended positions</h3><p class="muted">Matured Pendle positions, finished Sablier streams, resolved Polymarket wins.</p></div>
+<div class="card"><span class="tag">Coming</span><h3>Shut-down apps and chains</h3><p class="muted">Balances in apps and networks that closed but can still pay out.</p></div>
+</div></section>
+<section id="how"><h2>How it works</h2><div class="grid">
+<div class="card"><div class="num">1</div><h3>Paste your wallets</h3><p class="muted">Ethereum or Solana addresses, ENS names, or upload a file. No sign-up.</p></div>
+<div class="card"><div class="num">2</div><h3>See what is yours</h3><p class="muted">One total in dollars, biggest position first.</p></div>
+<div class="card"><div class="num">3</div><h3>Claim it officially</h3><p class="muted">Each result links to the project's own page with plain steps. You claim in your own wallet.</p></div>
+</div></section>
+<section id="safe"><h2>Safe by design</h2><p class="muted">People hunting for lost funds are a favorite target for scammers. This is what we never do.</p>
+<ul class="safe"><li>We only read public blockchain data.</li><li>We never ask you to connect a wallet or sign anything.</li><li>We never ask for a seed phrase or private key.</li><li>We do not store the addresses you check.</li><li>Every claim link is checked against a list of official sites.</li><li>Anyone offering to recover your funds, or asking for your keys, is a scammer.</li></ul></section>
+<section id="faq"><h2>Questions</h2>
+<details><summary>Is it free?</summary><p>Yes.</p></details>
+<details><summary>Which wallets and chains can I check?</summary><p>Ethereum addresses and ENS names, Polygon (Polymarket) and Solana addresses. More chains, including Arbitrum, Optimism and Base withdrawals, are on the roadmap.</p></details>
+<details><summary>Why might a claim not work?</summary><p>Projects change their contracts, deadlines and penalties. Always read the official page before you confirm, and expect to pay a network fee.</p></details>
+<details><summary>Do you store my addresses?</summary><p>No. Addresses are used to read public data and are not logged by the app.</p></details>
+<details><summary>Is the list complete?</summary><p>No. We cover a small number of sources and add more only after verifying them. A result of "nothing found" does not prove nothing exists.</p></details>
+</section>
+<footer>ClaimScout is read-only and not financial advice. Prices are indicative.</footer>
+<script src="app.js"></script></body></html>
