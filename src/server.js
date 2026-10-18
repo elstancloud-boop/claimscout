@@ -7,6 +7,7 @@ const { parseWallets, scanWallets, expandEns } = require('./scan');
 const PORT = process.env.PORT || 3000;
 const PUBLIC = path.join(__dirname, '..', 'public');
 const hits = new Map(); // ip -> [timestamps]; in-memory only
+setInterval(() => { const now = Date.now(); for (const [ip, a] of hits) if (!a.some(t => now - t < 60000)) hits.delete(ip); }, 60000).unref(); // prune idle IPs
 function limited(ip) {
   const now = Date.now(), arr = (hits.get(ip) || []).filter(t => now - t < 60000);
   arr.push(now); hits.set(ip, arr); return arr.length > 10; // 10 scans/min/IP
